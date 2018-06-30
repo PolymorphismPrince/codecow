@@ -1,9 +1,19 @@
+@keyframes fade_in {
+    from {opacity: 0; left: 50%; width: 0px; height: 0px;}
+    to {opacity: 1; left: 25%; width: 50%; height: 50%;}
+}
+
+@keyframes fade_out {
+    from {opacity: 1; left: 25%; width: 50%; height: 50%;}
+    to {opacity: 0; left: 50%; width: 0px; height: 0px;}
+}
 
 
 html, body {
     height: 100%;
     margin: 0;
     padding: 0;
+    
 }
 
 #main_img {
@@ -39,13 +49,14 @@ body {
 }
 
 #subtitle_div {
-    font-size: calc(calc(4vw + 4vh) / 2);
+    font-size: calc(calc(3vw + 3vh) / 2);
     
     font-weight: 300;
 }
 
 #title_div {
-    font-size: calc(calc(15vw + 15vh) / 2);
+   
+    font-size: calc(calc(9vw + 9vh) / 2);
     font-weight: 300;
     
 }
@@ -74,8 +85,8 @@ body {
 
 #flipper {
     position:absolute;
-    top: 20%;
-    left: 40%;
+    top: 40%;
+    left: 39%;
     
     
    
@@ -96,44 +107,62 @@ body {
     top: 0px;
    transform-origin: bottom;
    background-color: #0d0d0d;
-    backface-visibility: hidden;
+    backface-visibility: visible;
 }
 
 #go {
-    text-align: center;
+    padding: 5px;
+    overflow: auto;
     width: calc(calc(50vw + 50vh) / 2);
     height: calc(calc(15vw + 15vh) / 2);
-    font-size: calc(calc(7vw + 7vh) / 2);
-    color: silver;
+    font-size: calc(calc(1vw + 1vh) / 2);
+    
     font-family: 'Encode Sans Condensed', sans-serif;
     margin:5px;
     font-weight: 300;
-    border-radius: 30%;
+    
     padding-top: 10%;
-    background-color:#747474;
+    color:#747474;
     display: block;
     transition-duration: 0.2s;
-    outline: 0px solid silver; 
+    
+  
 }
 
-#go:hover {
-    background-color: #999999;
-    border-radius: 40%;
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #747474;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+    border-radius: 10px;
+}
+
+
+
+
+.page {
+    color: silver;
+    font-family: 'Encode Sans Condensed', sans-serif;
+    padding: 5px;
+}
+
+.project_listing {
     cursor: pointer;
 }
 
-.home_page_GUI {
-    width: 30%;
-    height: 30%;
-    overflow: auto;
-    position: absolute;
-    left: 35%;
-    background-color: black;
-    opacity: 0;
-    transition-duration: 1s;
-}
-
-.full_opacity {
-    opacity: 1;
-    
-}
